@@ -9,6 +9,7 @@ net-misc/curl {
 	you will often have toexplicitly install libcurl-devel to have the header files andthe libcurl library.
 	libcurl (version 7.14.0 or higher)http://curl.haxx.se. On Linux systems
 	you will oftenhave to explicitly install libcurl-devel to have theheader files
+	libcurl: libcurl-devel (rpm) orlibcurl4-openssl-dev (deb).
 }
 ~net-misc/curl {
 	curl
