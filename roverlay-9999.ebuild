@@ -7,7 +7,7 @@ EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="ssl,threads(+),readline(+)"
 
-EGIT_REPO_URI='git://git.overlays.gentoo.org/proj/R_overlay.git'
+EGIT_REPO_URI='git://anongit.gentoo.org/proj/R_overlay.git'
 
 DOCS=()
 HTML_DOCS=( doc/html/. )
@@ -16,7 +16,7 @@ EXAMPLES=( examples/. )
 inherit user distutils-r1 git-r3 bash-completion-r1
 
 DESCRIPTION="Automatically generated overlay of R packages"
-HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/R_overlay.git;a=summary"
+HOMEPAGE="https://cgit.gentoo.org/proj/R_overlay.git"
 SRC_URI=""
 
 LICENSE="GPL-2+"
