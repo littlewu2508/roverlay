@@ -14,39 +14,43 @@ dev-lang/R[tk] {
 	tcltk (but only for the GUI
 }
 
-# always assumed to be provided by dev-lang/R (taken from generate_ebuild)
+# base packages that always assumed to be provided by dev-lang/R (taken from generate_ebuild)
 % {
 	base
-	boot
-	class
-	cluster
-	codetools
 	compiler
 	datasets
-	foreign
 	graphics
 	grDevices
 	grid
-	KernSmooth
-	lattice
-	libR
-	MASS
-	Matrix
 	methods
-	mgcv
-	nlme
-	nnet
 	parallel
-	rpart
-	spatial
 	splines
 	stats
 	stats4
-	survival
 	tcltk
 	tools
 	utils
 }
+
+# recommended packages
+dev-lang/R[-minimal] {
+	boot
+	class
+	cluster
+	codetools
+	foreign
+	KernSmooth
+	lattice
+	MASS
+	Matrix
+	mgcv
+	nlme
+	nnet
+	rpart
+	spatial
+	survival
+}
+
 # FIXME, seems to be provided too
 % {
 	stepfun
