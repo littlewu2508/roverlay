@@ -435,9 +435,12 @@ class PackageDirBase ( roverlay.overlay.base.OverlayObject ):
             )
          # -- end if
 
-         addition_override = (
-            package_info.overlay_addition_override or _PKG_DEFAULT_BEHAVIOR
-         )
+         # in absence of dynamic addition control,
+         # set the default mode flags if addition_override is not configured
+         if package_info.overlay_addition_override is None:
+            package_info.overlay_addition_override = _PKG_DEFAULT_BEHAVIOR
+
+         addition_override = package_info.overlay_addition_override
 
          if addition_override & _PKG_FORCE_DENY:
             log_addition_control_action ( _PKG_FORCE_DENY, shortver )
