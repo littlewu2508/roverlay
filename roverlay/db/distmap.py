@@ -404,7 +404,7 @@ class _DistMapBase ( roverlay.util.objects.PersistentContent ):
       if info is None:
          # new file, no revbump required
          return False
-      elif info.repo_name != package_info['origin'].name:
+      elif info.get_repo_name() != package_info['origin'].name:
          # don't revbump if repo names don't match, this likely results in
          # infinite revbumps if a package is available from more than one repo
          return False
