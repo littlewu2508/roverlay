@@ -103,6 +103,7 @@ def read_text_file ( filepath, preparse=None, try_harder=True ):
                raise
 
             else:
+               yield line
                # read remaining lines
                for line in creader:
                   yield line
