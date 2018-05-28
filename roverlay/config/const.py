@@ -46,10 +46,9 @@ _CONSTANTS = dict (
       default_header = (
          '# Copyright 1999-{year:d} Gentoo Foundation\n'
          '# Distributed under the terms of the GNU General Public License v2\n'
-         '# $Header: $\n'
       ).format ( year=time.gmtime()[0] ),
       # EAPI=N and inherit <eclasses> are no longer part of the default header
-      eapi = 5,
+      eapi = 6,
 
       # number of workers used by OverlayCreator
       # when 0    => dont use threads
