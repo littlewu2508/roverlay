@@ -20,6 +20,10 @@ net-misc/curl {
 # FIXME
 net-libs/czmq :: libzmq
 
+net-libs/zeromq {
+	or ZeroMQ library >=4.0.4. Solaris 10 needs ZeroMQ library 4.0.7
+}
+
 net-misc/s3cmd :: s3cmd
 
 virtual/ssh {

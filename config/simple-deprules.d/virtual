@@ -1,0 +1,15 @@
+virtual/boot :: boot
+virtual/class :: class
+virtual/cluster :: cluster
+virtual/codetools :: codetools
+virtual/foreign :: foreign
+virtual/KernSmooth :: KernSmooth
+virtual/lattice :: lattice
+virtual/MASS :: MASS
+virtual/Matrix :: Matrix
+virtual/mgcv :: mgcv
+virtual/nlme :: nlme
+virtual/nnet :: nnet
+virtual/rpart :: rpart
+virtual/spatial :: spatial
+virtual/survival :: survival

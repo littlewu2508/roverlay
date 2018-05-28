@@ -22,8 +22,10 @@
 	your mileage may vary)
 	optional)
 	heavily suggested)
+	and Windows
 	hence Windows or Linux
 	$distributions package thelibrary file separately from the executible
+	libraries(See the INSTALL file)
 	or INSTALL.windows under Windows
 	standard unix tools (e.g.
 	rgdal OSX binary packages are also available at the samesite.
@@ -40,6 +42,7 @@
 	so for instance on Debian and Ubuntuyou would need the "libcsound64-dev" package.
 	For the MERLIN wrapper
 	Mac
+	Mac OSX
 	Mac OS X
 	Mac OS X binaries
 	Mac.Parallel HDF5
@@ -62,6 +65,8 @@
 	writing some graphicformats
 	available athttp://www.monetdb.org
 	it is used in the demos too).
+	headers
+	OpenCSW.
 }
 
 # that's a hardware requirement
@@ -87,6 +92,7 @@
 	Will use djmrgl or rgl packages for rendering ifpresent
 	Will use djmrgl or rgl packages for rendering if present
 	SYMPHONY for Windows (sources included for otherOSes)
+	SYMPHONY libraries
 }
 
 # ignore OSX recommendations

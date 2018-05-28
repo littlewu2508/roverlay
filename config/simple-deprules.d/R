@@ -32,25 +32,6 @@ dev-lang/R[tk] {
 	utils
 }
 
-# recommended packages
-dev-lang/R[-minimal] {
-	boot
-	class
-	cluster
-	codetools
-	foreign
-	KernSmooth
-	lattice
-	MASS
-	Matrix
-	mgcv
-	nlme
-	nnet
-	rpart
-	spatial
-	survival
-}
-
 # FIXME, seems to be provided too
 % {
 	stepfun

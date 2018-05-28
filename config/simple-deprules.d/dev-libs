@@ -2,6 +2,8 @@
 
 ~dev-libs/atk :: ATK
 
+~dev-libs/openssl :: OpenSSL
+
 ~dev-libs/boost {
 	boost library
 	boost
@@ -85,4 +87,9 @@ dev-libs/quantlib {
 
 dev-libs/geoip {
 	GeoIP from MaxMinds
+}
+
+dev-libs/icu {
+	ICU4C (>= 50
+	ICU4C (>= 52
 }

@@ -2,6 +2,7 @@
 
 # @system
 ! {
+	GNU make
 	GNU Make
 	GNU Make forexternalization
 	andg++ GNU compiler (a nvcc-compatible version of g++ is needed
@@ -16,10 +17,18 @@
 
 #sys-devel/gcc[cxx] :: g++ or Microsoft VC++
 ! :: g++ or Microsoft VC++
-
+! {
+	g++-4.6.* or later should be sufficient
+	g++-4.9.* or lateris preferred.
+	gcc (release >= 4.5).
+	C++11
+	C++11 (supporting at least std=c++0x)
+	A C++11 compiler. Version 4.6.* of g++ (ascurrently in Rtools) is insufficient
+}
 
 # always provided? (except for Gentoo/*BSD)
 ! {
+	Linux operating system
 	Linux operating system.
 	Linuxoperationg system
 }
@@ -29,6 +38,7 @@
 	POSIX-compliant OS (essentially anything butWindows
 	POSIX-compliant OS (essentially anything butWindows)
 	Unix
+	A 64-bit POSIX OS such as Linux or OS X with IANAtime zone data in /usr/share/zoneinfo as well as a C++11compiler.
 }
 
 # rpcgen is part of glibc

@@ -3,6 +3,7 @@
 app-text/antiword {
 	Antiword (http://www.winfield.demon.nl/) forreading MS Word files
 	antiword for reading MS Word files
+	Antiword (<http://www.winfield.demon.nl/>) forreading MS Word files
 }
 
 ~app-text/ghostscript-gpl :: ghostscript
@@ -23,3 +24,12 @@ app-text/texlive {
 app-text/poppler {
 	pdfinfo
 }
+
+
+~app-text/pandoc :: pandoc
+app-text/pandoc {
+	pandoc (>= 1.12.3) -http://johnmacfarlane.net/pandoc
+	pandoc with https support
+	Package vignettes based on R Markdown v2 requirePandoc (http://pandoc.org). The function rst2pdf() andvignettes based on reStructuredText require rst2pdf(https://github.com/rst2pdf/rst2pdf).
+}
+
