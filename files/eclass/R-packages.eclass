@@ -15,7 +15,9 @@ RDEPEND="${DEPEND}"
 
 R-packages_src_unpack() {
 	unpack ${A}
-	mv ${PN//_/.} ${P}
+	if [[ -d "${PN//_/.}" ]] && [[ ! -d "${P}" ]]; then
+		mv ${PN//_/.} ${P}
+	fi
 }
 
 R-packages_src_prepare() {
@@ -29,7 +31,7 @@ R-packages_src_compile() {
 
 R-packages_src_install() {
 	insinto /usr/$(get_libdir)/R/site-library
-	doins -r "${WORKDIR}"/${PN//_/.}y
+	doins -r "${WORKDIR}"/${PN//_/.}
 }
 
 R-packages_pkg_postinst() {
