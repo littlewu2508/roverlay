@@ -6,7 +6,7 @@
 # e.g. creates a R-overlay.conf.tests file.
 #
 
-: ${PYTHON_IMPL:="python2.7 python3"}
+: ${PYTHON_IMPL:="python3"}
 
 readonly SCRIPT=$(readlink -f "${BASH_SOURCE[0]?}")
 readonly SCRIPT_NAME="${BASH_SOURCE[0]##*/}"
