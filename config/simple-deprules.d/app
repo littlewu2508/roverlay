@@ -3,10 +3,7 @@
 app-admin/ec2-api-tools :: ec2-api-tools
 
 # FIXME zip or unzip?
-app-arch/zip :: zip
+app-arch/zip :: ^zip$
 
 # FIXME: this is not satisfiable, latest dieharder version in portage is 2.28.1
-app-crypt/dieharder {
-	DieHarder library (>= 2.8.1) fromhttp://www.phy.duke.edu/~rgb/General/dieharder.php
-	DieHarder library (>= 3.31.1) fromhttp://www.phy.duke.edu/~rgb/General/dieharder.php
-}
+app-crypt/dieharder :: DieHarder

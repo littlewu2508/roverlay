@@ -2,43 +2,26 @@
 
 # @system
 ! {
+	bash
+	^awk$
+	gmake
 	GNU make
-	GNU Make
-	GNU Make forexternalization
-	andg++ GNU compiler (a nvcc-compatible version of g++ is needed
-	andg++ GNU compiler version 3.4 (version 4.4 is not yet compatiblewith nvcc).
-	chmod)
-}
-
-% :: gcc
-# FIXME: newer gcc versions could work, too
-<sys-devel/gcc-4.4 :: gcc/g++ version 4.4 is not yet compatible with nvcc).
-<=sys-devel/gcc-4.5 :: gcc (release <= 4.5).
-
-#sys-devel/gcc[cxx] :: g++ or Microsoft VC++
-! :: g++ or Microsoft VC++
-! {
-	g++-4.6.* or later should be sufficient
-	g++-4.9.* or lateris preferred.
-	gcc (release >= 4.5).
-	C++11
-	C++11 (supporting at least std=c++0x)
-	A C++11 compiler. Version 4.6.* of g++ (ascurrently in Rtools) is insufficient
+	g\+\+ GNU compiler
+	chmod
+        ^gcc
+        ^g\+\+
+        ^C\+\+11
+        C\+\+11.*compiler
 }
 
 # always provided? (except for Gentoo/*BSD)
 ! {
-	Linux operating system
-	Linux operating system.
-	Linuxoperationg system
+	Linux.*operating.*system
 }
 # always provided
 ! {
-	POSIX-compliant OS (essentially anything but Windows)
-	POSIX-compliant OS (essentially anything butWindows
-	POSIX-compliant OS (essentially anything butWindows)
+	POSIX.*OS
 	Unix
-	A 64-bit POSIX OS such as Linux or OS X with IANAtime zone data in /usr/share/zoneinfo as well as a C++11compiler.
 }
 
 # rpcgen is part of glibc

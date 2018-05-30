@@ -10,74 +10,34 @@ dev-cpp/gtkmm :: gtkmm-2.4
 }
 
 # FIXME
-dev-db/unixODBC {
-	An ODBC driver manager and drivers. See README.
-	An ODBC3 driver manager and drivers.
-	An ODBC3 driver manager and drivers. See README.
-	ODBC support and a back end database
-}
+dev-db/unixODBC :: ODBC
 
-dev-java/ant :: ant
+dev-java/ant :: ^ant$
 dev-java/jdbc-postgresql :: PostgreSQL JDBCdriver
 
-
-# try to slot-match dev-lang/python, but use known slots only
-~dev-lang/python:slotparts=2:restrict=2.7,3.2,3.3,3.4 {
-   python
-   python headers
-}
 # else fall back to fuzzy
 ~dev-lang/python {
-   python
+   ^python
 }
 # lowest python version in portage: 2.7 (2.6 masked)
 dev-lang/python {
-   Python (>= 2.4) to run Asciidoc(http://www.python.org/)
-   Python 2.7.x or Python 3.2.x-3.4.x
+   ^Python
 }
-
 
 dev-lang/lua :: lua version>= 5.1.4
 ~dev-lang/lua :: lua
 
-~dev-tex/pgf {
-	pgf
-}
+~dev-tex/pgf :: ^pgf$
 
->=dev-tex/pgf-2.10 {
-	pgf (>=2.10) (http://sourceforge.net/projects/pgf/)for the vignette
-}
+>=dev-tex/pgf-2.10 :: pgf.*>=2.10
 
-~dev-tcltk/bwidget {
-	bwidget
-	Tcl/Tk extensions BWidget
-}
+~dev-tcltk/bwidget :: bwidget
 
 ~dev-tcltk/tktable :: tktable
 
-dev-util/cmake {
-	cmake
-	cmake (http://www.cmake.org)
-}
+dev-util/cmake :: cmake
 
-~dev-python/numpy {
-	numpy
-}
-
-# FIXME: the jdk rules are not quite correct,
-#         virtual/jdk:1.7 (probably) works for some packages, too
-#
-~virtual/jdk:slotparts=i1.6:restrict=1.6,6.0 {
-	java
-	Java version
-	java runtime
-}
-
-~virtual/jdk:slotparts=i1.7:restrict=1.7,7.0 {
-	java
-	Java version
-	java runtime
-}
+~dev-python/numpy :: numpy
 
 # slot-relative rules take precedence
 #  TODO: slot-restricted rules should get a lower priority

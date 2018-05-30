@@ -8,15 +8,13 @@
 # Use slot when the resolver can deal with them properly
 >=sci-libs/fftw-3 {
 	fftw3
-	fftw3 (optional)
 }
 ~sci-libs/fftw :: fftw
 # Use slot when the resolver can deal with them properly
 ~sci-libs/fftw :: fftw3
 
 sci-libs/gdal {
-	GDAL library from http://www.gdal.org/download.html
-	GDAL library from http://www.remotesensing.org/gdal/download.html
+	GDAL library
 
 }
 ~sci-libs/gdal {
@@ -30,37 +28,29 @@ sci-libs/gdal {
 }
 
 sci-libs/gsl {
-	gsl. Note: users should have GSL installed. Windowsusers: 'consult the README file available in the inst directoryof the source distribution for necessary configurationinstructions'.
-	gsl (with development libraries)
+	^gsl
 }
 ~sci-libs/gsl {
 	GNU GSL
-	gsl
+	^gsl
 	libgsl
-	libgslcblas
-	GNU GSL for the GSL random-number generators
-	GNU GSL forthe GSL random-number generators
-	GNU Scientific Library (GSL)
-	GNU Scientific Library version
+	GNU Scientific Library
 }
 
 ~sci-libs/hdf5 :: hdf5
 sci-libs/hdf5[cxx] {
-	libhdf5 (>= 1.8.x) with C++ interface(--enable-cxx=yes)
-	libhdf5 (>= 1.8.12) with C++ interface(--enable-cxx=yes)
+	libhdf5.*C\+\+
 }
 # remnant of hdf5
 ! :: v18 API enabled
 
 ~sci-libs/itpp {
-	itpp
-	libitpp
+	itpp$
 }
 
 # FIXME: dev-lang/R[lapack]?
 virtual/lapack {
-	LAPACK sharedlibrary
-	LAPACKshared library
+	LAPACK
 }
 
 sci-libs/lapack-atlas :: lapack_atlas
@@ -70,19 +60,12 @@ sci-libs/libsvm :: SVMlight
 
 ~sci-libs/mkl :: Intel MKL
 
-sci-libs/netcdf :: netcdf library version 4.1 or later
 ~sci-libs/netcdf :: netcdf
 
-sci-libs/proj :: proj 4.4.6 or higher (http://proj.maptools.org/)
->=sci-libs/proj-4.4.9 :: PROJ.4(proj >= 4.4.9)
-
+sci-libs/proj :: ^proj
 
 # FIXME, portage version is 2.1.21
-sci-libs/udunits :: udunits (>= 1.11.7) or udunits2(>= 2.1.22)
-~sci-libs/udunits {
-	udunits
-	udunits-2
-}
+sci-libs/udunits :: udunits
 
 virtual/blas :: blas
 

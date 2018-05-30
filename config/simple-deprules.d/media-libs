@@ -3,23 +3,15 @@
 ~media-libs/flac :: flac
 
 # FIXME: some packages write optional deps into SystemRequirements (e.g. rgl from CRAN)
-media-libs/freetype :: FreeType (optional)
 ~media-libs/freetype :: freetype
 media-libs/freetype:2 :: recommended: freetype2
 
-media-libs/gd {
-	libgd (>= 2.0.28 http://www.boutell.com/gd/)
-	libgd (>= 2.0.29 http://www.boutell.com/gd/)
-	libgd (freetype2
-}
+media-libs/gd :: libgd
 
-media-libs/libpng {
-	libpng(>=1.2.9
-	libpng (optional)
-	libpng(optional)
-}
+media-libs/libpng :: libpng
+
 ~media-libs/libpng {
-	png
+	png$
 	libpng
 }
 
@@ -27,13 +19,9 @@ media-libs/libpng {
 
 ~media-libs/netpbm :: netpbm
 
-media-libs/raptor :: libraptor2 (>= 2.0.0 http://librdf.org/raptor/)
+media-libs/raptor :: libraptor
 
-media-libs/tiff {
-	linux: libtiff (and libtiff-devel)
-	optional libtiff
-	optionally libtiff
-}
+media-libs/tiff :: libtiff
 
 ~media-libs/tiff {
 	tiff
@@ -41,8 +29,4 @@ media-libs/tiff {
 	libtiff-devel
 }
 
-virtual/jpeg {
-	libjpeg
-	jpeg
-	jpeg libraries
-}
+virtual/jpeg :: jpeg

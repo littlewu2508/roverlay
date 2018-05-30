@@ -1,35 +1,16 @@
 #deptype sys
 
-app-text/antiword {
-	Antiword (http://www.winfield.demon.nl/) forreading MS Word files
-	antiword for reading MS Word files
-	Antiword (<http://www.winfield.demon.nl/>) forreading MS Word files
-}
+app-text/antiword :: Antiword
 
 ~app-text/ghostscript-gpl :: ghostscript
 
 app-text/poppler {
-	pdfinfo andpdftotext for reading PDF
-	pdfinfo and pdftotext from Poppler(http://poppler.freedesktop.org/) for reading PDF
-	pdftotext from Poppler(http://poppler.freedesktop.org/) for reading PDF
+	poppler
+	pdfinfo
+	pdftotext
 }
 
 # pdflatex?
-app-text/texlive {
-	(PDF)LaTeX (http://www.latex-project.org/) withpdfpages package for studentGrowthPlot option in visualizeSGPto bind together student growth plots into school catalogs.
-	(PDF)LaTeX (http://www.latex-project.org/) with'pdfpages' package for studentGrowthPlot option in visualizeSGPto bind together student growth plots into school catalogs.
-	(PDF)LaTeX for saveLatex()
-}
-
-app-text/poppler {
-	pdfinfo
-}
-
+app-text/texlive :: LaTeX
 
 ~app-text/pandoc :: pandoc
-app-text/pandoc {
-	pandoc (>= 1.12.3) -http://johnmacfarlane.net/pandoc
-	pandoc with https support
-	Package vignettes based on R Markdown v2 requirePandoc (http://pandoc.org). The function rst2pdf() andvignettes based on reStructuredText require rst2pdf(https://github.com/rst2pdf/rst2pdf).
-}
-

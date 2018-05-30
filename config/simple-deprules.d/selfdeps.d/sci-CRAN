@@ -1,30 +1,29 @@
 #deptype pkg,selfdep
 
 sci-CRAN/csound {
-   A valid copy of the Csound library must be present.Csound can be downloaded from http://www.csounds.com. Thelibrary is included in the default Windows and Mac OS Xdistributions
-   playitbyr creates sound using the csound package
-   which requires the free and open source software synthesizerCsound
+   Csound
 }
 
-~sci-CRAN/mimR :: mim
+# IRKernel has a conflicting named sci-R/repr.
+~sci-CRAN/repr :: ^repr$
+
+~sci-CRAN/mimR :: ^mim$
 
 sci-CRAN/quadprog :: portfolio.optim needs package quadprog
 
 sci-CRAN/rgl :: rgl packages for rendering
 
 sci-CRAN/MVA {
-   white.test needs packagemva
-   white.test needs package mva
+   package.*mva
 }
 
 ~sci-CRAN/sgeostat {
-   sgeostat.
-   geostat.
+   geostat
 }
 
 # the following rule is _not_ correct
-#  (the dependency strings listed here want the "xgobi" program from
-#   http://www.research.att.com/areas/stat/xgobi/, not the R package)
+#  the dependency strings listed here want the "xgobi" program from
+#   http://www.research.att.com/areas/stat/xgobi/, not the R package
 #
 ## sci-CRAN/xgobi {
 ##    xgobi must be installed additionally
@@ -33,8 +32,6 @@ sci-CRAN/MVA {
 
 ~sci-CRAN/BayesFactor :: BayesFactorPCL
 
->=sci-CRAN/adimpro-0.4.2 :: adimpro (>= 0.4.2)The R-package 'adimpro' (for reading
-
 sci-CRAN/adimpro {
-   The R-package 'adimpro' (for reading
+   adimpro
 }

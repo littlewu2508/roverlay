@@ -1,95 +1,52 @@
 #deptype sys
 
-~dev-libs/atk :: ATK
+~dev-libs/atk :: ^ATK$
 
 ~dev-libs/openssl :: OpenSSL
 
-~dev-libs/boost {
-	boost library
-	boost
-}
-dev-libs/boost {
-	Boost C++ libraries (1.31 or greater)
-	Boost library (>= 1.34.0) from http://www.boost.org
-	Boost library (>= 1.34.0) fromhttp://www.boost.org
-	Boost library from http://www.boost.org
-	Boost libraryfrom http://www.boost.org
-	boost headers for smart pointers
-	The Boost 'program_options' library(http://boost.org) is required.
-	Boost (or the BoostHeaders package)
-}
+~dev-libs/boost :: boost
 
-~dev-libs/glib {
-	glib
-	glib2
-}
+~dev-libs/glib :: glib
 
 ~dev-libs/gmp {
 	libgmp
-	gmp
-}
-~dev-libs/gmp {
-	GMP (GNU MP bignum library
-	GMP (GNU MP bignum library)
-	GMP (GNU Multiple Precision library
-	http://gmplib.org/)
+	^gmp
+        gmplib
 }
 
 ~dev-libs/libffi :: libffi
 
 ~dev-libs/libpcre {
-	libpcre
 	pcre
 }
 
 ~dev-libs/libxml2 {
-	xml
-	xml2
-	libxml
-	libxml2
+	^xml
+	^libxml
 }
 
 ~dev-libs/libxslt :: libxslt
 
 dev-libs/mpc {
-	and MPC (Multiple Precision ComplexLibrary
-	http://www.multiprecision.org/)
+        ^mpc$
+        multi.*precision
 }
 
-~dev-libs/mpfr {
-	MPFR (MP Floating-Point Reliable Library
-	mpfr
-	http://mpfr.org/)
-}
+~dev-libs/mpfr :: mpfr
+
 # FIXME versions -> fuzzy
-dev-libs/quantlib {
-	QuantLib libraries must be installed
-	QuantLib library (>= 0.8.1) from http://quantlib.org
-	QuantLib library (>= 0.9.0) from http://quantlib.org
-	QuantLib library (>= 0.9.7) from http://quantlib.org
-	QuantLib library (>= 0.9.7) fromhttp://quantlib.org
-	QuantLib library (>= 0.9.9) fromhttp://quantlib.org
-	QuantLib library from http://quantlib.org
-}
+dev-libs/quantlib :: QuantLib
 
 ~dev-libs/quantlib {
 	QuantLib library
 }
 
-~dev-libs/xerces-c {
-	xerces-c
-	libxerces-c
-}
+~dev-libs/xerces-c :: xerces-c
 
 ~sys-devel/clang {
 	clang
 }
 
-dev-libs/geoip {
-	GeoIP from MaxMinds
-}
+dev-libs/geoip :: GeoIP
 
-dev-libs/icu {
-	ICU4C (>= 50
-	ICU4C (>= 52
-}
+dev-libs/icu :: ICU4C

@@ -8,7 +8,7 @@
 
 __all__ = [ 'FuzzySimpleRule', 'SimpleRule', ]
 
-import logging
+import logging, re
 
 from roverlay import config
 from roverlay.depres import deprule
@@ -21,7 +21,7 @@ class SimpleRule ( deprule.DependencyRule ):
    INDENT = 3 * ' '
 
    def __init__ ( self,
-      dep_str=None, priority=50, resolving_package=None,
+      dep_str=None, priority=80, resolving_package=None,
       is_selfdep=0, logger_name='simple_rule',
       selfdep_package_names=None, finalize=False,
    ):
@@ -67,6 +67,10 @@ class SimpleRule ( deprule.DependencyRule ):
       self.dep_alias = frozenset ( self.dep_alias )
       if self.prepare_lowercase_alias:
          self.dep_alias_low = frozenset ( x.lower() for x in self.dep_alias )
+         temp_set = self.dep_alias_low
+         if self.is_selfdep:
+            temp_set = ("^{}$".format(x) for x in self.dep_alias_low)
+         self.dep_regex = re.compile('|'.join(x for x in temp_set))
 
    def add_resolved ( self, dep_str ):
       """Adds an dependency string that should be matched by this rule.
@@ -80,7 +84,7 @@ class SimpleRule ( deprule.DependencyRule ):
    def _find ( self, dep_str, lowercase ):
       if lowercase:
          if hasattr ( self, 'dep_alias_low' ):
-            if dep_str in self.dep_alias_low:
+            if self.dep_regex.search(dep_str):
                return True
 
          elif dep_str in ( alias.lower() for alias in self.dep_alias ):

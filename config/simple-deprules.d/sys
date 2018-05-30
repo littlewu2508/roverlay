@@ -2,25 +2,19 @@
 
 ~sys-libs/db {
 	BerkelyDB
-	BerkeleyDB
-	Oracle Berkeley DB 11gR2
+	Berkeley.*DB
 }
 
 ~sys-libs/zlib :: zlib
-sys-libs/zlib :: zlib (optional)
 
 # => sys-cluster/
 virtual/mpi {
-	LamMPI(>= 6.5.9) or MPICH2(>= 1.0.2) or OpenMPI ()
-	LamMpi(>= 6.5.9) or Mpich2(>= 1.0.2)
-	OpenMPI (>= 1.5.4) on Linux
-	OpenMPI or MPICH2
-}
-
-# the "... on Windows" line could probably be ignored
-virtual/mpi {
+	LamMPI
+	Open.*MPI
+        MPICH2
 	MPI2
-	MPICH2 (>=1.4.1p1) on Windows
+	MPICH2
+	MPI.*library
 }
 
 ! {
@@ -32,17 +26,15 @@ virtual/mpi {
 ~sci-R/Rcpp :: Rcpp
 
 # Split across multiple lines, next line adds Linux and Mac
->=sys-cluster/openmpi-1.5.4 :: OpenMPI (>= 1.5.4) on Solaris
+>=sys-cluster/openmpi-1.5.4 :: OpenMPI
 
 @selfdep
-sci-R/rJava :: JRI
+sci-R/rJava :: ^JRI$
 
-~app-text/pandoc :: Pandoc (http://johnmacfarlane.net/pandoc) forexporting markdown files to other formats.
+~dev-tcltk/tktable :: Tktable
 
->=dev-tcltk/tktable-2.9 :: Tktable (>= 2.9
+~app-text/aspell :: aspell
 
->=app-text/aspell-0.60 :: aspell (>= 0.60
+dev-libs/openssl :: OpenSSL
 
-dev-libs/openssl :: OpenSSL library
-
-~app-crypt/dieharder :: DieHarder library
+~app-crypt/dieharder :: DieHarder

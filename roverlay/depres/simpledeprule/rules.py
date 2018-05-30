@@ -151,11 +151,11 @@ class SimpleIgnoreDependencyRule ( SimpleRule ):
 
    RULE_PREFIX = '!'
 
-   def __init__ ( self, priority=50, resolving_package=None, **kw ):
+   def __init__ ( self, priority=80, resolving_package=None, **kw ):
       super ( SimpleIgnoreDependencyRule, self ) . __init__ (
          logger_name = 'IGNORE_DEPS',
          resolving_package=None,
-         priority=50,
+         priority=80,
          **kw
       )
 # --- end of SimpleIgnoreDependencyRule ---
@@ -187,7 +187,7 @@ class SimpleFuzzyIgnoreDependencyRule ( FuzzySimpleRule ):
 
    RULE_PREFIX = '%'
 
-   def __init__ ( self, priority=51, resolving_package=None, **kw ):
+   def __init__ ( self, priority=81, resolving_package=None, **kw ):
       super ( SimpleFuzzyIgnoreDependencyRule, self ) . __init__ (
          priority=priority,
          resolving_package=resolving_package,

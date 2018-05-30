@@ -1,31 +1,20 @@
 #deptype sys
 
-net-misc/curl {
-	curl (version 7.12.0) http://curl.haxx.se
-	curl (version 7.12.0 or higher)<http://curl.haxx.se>
-	curl (version 7.12.0 or higher) http://curl.haxx.se
-	curl (version 7.12.0 or higher) <http://curl.haxx.se>
-	curl (version 7.14.0 or higher) http://curl.haxx.se
-	you will often have toexplicitly install libcurl-devel to have the header files andthe libcurl library.
-	libcurl (version 7.14.0 or higher)http://curl.haxx.se. On Linux systems
-	you will oftenhave to explicitly install libcurl-devel to have theheader files
-	libcurl: libcurl-devel (rpm) orlibcurl4-openssl-dev (deb).
-}
+net-misc/curl :: curl
 ~net-misc/curl {
 	curl
 	libcurl
-	the libcurl library.
+	the libcurl library
 }
 
 # FIXME
 net-libs/czmq :: libzmq
 
-net-libs/zeromq {
-	or ZeroMQ library >=4.0.4. Solaris 10 needs ZeroMQ library 4.0.7
-}
+net-libs/zeromq :: ZeroMQ
 
 net-misc/s3cmd :: s3cmd
 
 virtual/ssh {
-	ssh daemon on the server side only:see the rreval manual (vignette) for details.
+	^ssh
+        ssh$
 }

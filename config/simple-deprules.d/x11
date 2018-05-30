@@ -1,26 +1,22 @@
 #deptype sys
 
-x11-libs/cairo :: cairo (>= 1.2 http://www.cairographics.org/)
 ~x11-libs/cairo :: cairo
 
-~x11-libs/gtk+ :: gtk+
+~x11-libs/gtk+ :: gtk\+
 
 ~x11-libs/pango :: pango
 
 # qt has its own category now
 dev-qt/qtcore {
-	qt
-	Qt4 libraries and headers (http://qt.nokia.com)
-	Qt4 libraries
+	^qt$
+	^Qt4.*libraries
 }
-! :: headers (http://qt.nokia.com)
 
 x11-misc/xclip {
-	xclip (Linux)
+	xclip
 }
 
 virtual/opencl {
-	OpenCL library
 	OpenCl
 }
 

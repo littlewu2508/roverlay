@@ -2,8 +2,7 @@
 
 # == geo ==
 ~sci-geosciences/gmt {
-	libgmt
-	gmt
+	gmt$
 }
 ~sci-geosciences/grass :: grass
 
@@ -11,44 +10,35 @@
 
 ~sci-mathematics/glpk {
 	glpk
-	GLPK library package (e.g.
 }
 
 ~sci-mathematics/jags :: jags
-sci-mathematics/jags :: jags (see http://mcmc-jags.sourceforge.net)
-
-sci-mathematics/jags {
-	JAGS (>= 3.2.0) (or WinBUGS (>= 1.4) or OpenBUGS(>= 3.2.2))
-}
 
 # lowest octave version in portage is 3.4
 sci-mathematics/octave {
-	Octave (>= 3.2.4) and its development files
+	Octave
 }
 
 # lowest version in portage is 2.3.4-r1
 sci-mathematics/pari {
-	PARI/GP >= 2.3.0 [strongly recommended for logkda()]
-	PARI/GP >= 2.3.0 [strongly recommended forlogkda()]
 	pari/gp
 }
 
 sci-mathematics/singular {
-	Singular (http://www.singular.uni-kl.de) for exactcalculation of the MFR for graphs without splitting edges (onlyfor Unix systems).
+	Singular
 }
 
 ~sci-mathematics/yacas :: yacas
 sci-mathematics/yacas {
-	yacas (= 1.0.63) # instructions on home page
-	yacas (>= 1.0.63) # instructions on home page
+	yacas
 }
 
 sci-mathematics/octave {
-	Octave (>= 3.2.4)
+	Octave
 }
 
 sci-libs/netcdf {
-	NetCDF4 (4.1 or later) libraries.
+	NetCDF4
 }
 
 # there's also sci-biology/clustalw-mpi
@@ -58,8 +48,8 @@ sci-biology/clustalw {
 }
 
 sci-biology/ncbi-tools++ {
-	ncbi-blast+
-	ncbi-tools++
+	ncbi-blast\+
+	ncbi-tools\+\+
 }
 
 sci-biology/kalign {
@@ -67,13 +57,13 @@ sci-biology/kalign {
 }
 
 sci-mathematics/glpk {
-	libglpk-dev onDebian/Ubuntu)
+	libglpk-dev
 }
 
 #deptype all
 
 # some packages have glpk in "pkg" deps
-# (FIXME: does glpk in that context refer to an R package?)
+# FIXME: does glpk in that context refer to an R package?
 ~sci-mathematics/glpk {
 	glpk
 }
@@ -94,14 +84,14 @@ sci-mathematics/rstudio {
 
 # lowest sci-physics/root version in portage is 5.32.03
 sci-physics/root {
-	root_v5.32.01 <http://root.cern.ch> - See READMEfile for installation instructions.
+	root_v5.32.01
 }
 
 # == visualization ==
 
 ~sci-visualization/ggobi :: ggobi
 
-sci-biology/merlin :: MERLIN(www.sph.umich.edu/csg/abecasis/merlin) must be installed andpointed to in the PATH environment variable.
+sci-biology/merlin :: MERLIN
 
 sci-visualization/gnuplot {
 	gnuplot

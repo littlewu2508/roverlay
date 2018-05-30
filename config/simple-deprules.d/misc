@@ -1,9 +1,7 @@
-dev-vcs/git {
-   git
-}
+dev-vcs/git :: ^git$
 
 >=app-emulation/wine-1.5.26 {
-   wine (>= wine-1.5.26)
+   wine.*1.5.26
 }
 
 

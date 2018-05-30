@@ -2,77 +2,52 @@
 
 # ignored text
 ! {
-	available at <http://csound.sourceforge.net/>. See<http://playitbyr.org/csound.html> for more guidance on settingup Csound.
-	available at<http://csound.sourceforge.net/>. This package uses the sharedlibrary file
-	becauseBRugs does not support other platforms/OS right now.
-	binary Linux distributions often package thelibrary separately from the executible file
-	it is an extension for the R package tcltk that consists of Tclscripts. See README file.
-	all other functions are stand alone)
-	see also the topic 'SoPhy' in the documentation
-	see also the topic'SoPhy' in the documentation
-	see file README
-	see README
-	see README.
-	see ./README.
-	see the cloudRmpi manual (vignette)for details.
+	does not support
+	all other functions are stand alone
+        documentation
+        README
+        INSTALL
+        so for instance
+        optional
+        suggested
+        See the
 	see topic SoPhy below
-	so for instance onDebian and Ubuntu you would need the "libcsound64-dev" package.See the package web site for more guidance on setup andconfiguration.
-	so for instance onDebian and Ubuntu you would need the "libcsound64-dev" package.See the web site below for more guidance on setup.
 	some Windows variants are supported experimentally
-	your mileage may vary)
-	optional)
-	heavily suggested)
-	and Windows
-	hence Windows or Linux
-	$distributions package thelibrary file separately from the executible
-	libraries(See the INSTALL file)
-	or INSTALL.windows under Windows
-	standard unix tools (e.g.
-	rgdal OSX binary packages are also available at the samesite.
-	rgdal OSX binary packages are also available at the same site.
-	probably)
-	Linux and Mac
-	MPICH2 (>= 1.4.1p1) on Windows
+	your mileage may vary
+	Windows
+	distributions package
+	distributions often package
+	probably
 	which is included with standard Mac and Windowsinstallations of Csound. Some Linux distributions package thelibrary file separately from the executible
-	playitbyr creates sound using the csound package
-	which requires the free and open source software synthesizerCsound
-	A valid copy of the Csound library must present.Csound can be downloaded Thelibrary is included in the Windows and Mac OS X binaries
-	A valid copy of the Csound library must present.Csound can be downloaded Thelibrary is included in the Windows
 	binary Linux distributions often package the library separatelyfrom the executible file
-	so for instance on Debian and Ubuntuyou would need the "libcsound64-dev" package.
 	For the MERLIN wrapper
+        Debian
+        Ubuntu
 	Mac
-	Mac OSX
-	Mac OS X
-	Mac OS X binaries
-	Mac.Parallel HDF5
+        OSX
+	OS X
 	Linux/64bit
 	sources are included for other OSes.
 	see readme.txt
-	so for instance on Debian
-	so for instance onDebian
-	Ubuntu you would need the "libcsound64-dev" package.See the package web site for more guidance on setup andconfiguration.
-	Ubuntuyou would need the "libcsound64-dev" package.
-	which is included with standard Mac
+	so for instance
+        you would need the
 	which requires the free
-	drivers.
+	drivers
 	License
 	its development files
-	library (version2.2.0 or later)
-	libraries(See README.REQ)
-	Google Chrome for Windows
+	^library
+	Google Chrome
 	for externalization
 	writing some graphicformats
-	available athttp://www.monetdb.org
-	it is used in the demos too).
+	available at
+	it is used in the demos too
 	headers
-	OpenCSW.
+	OpenCSW
+	Linux
+	precision AMD or Nvidia GPU
+	^and$
+	in addition
 }
-
-# that's a hardware requirement
-! :: double-precision AMD or Nvidia GPU
-
-% :: Linux
 
 # ignore "Windows" in dependency fields:
 # (a) there's OS_Type for OS restrictions
@@ -89,28 +64,12 @@
 ! :: None
 
 ! {
-	Will use djmrgl or rgl packages for rendering ifpresent
-	Will use djmrgl or rgl packages for rendering if present
-	SYMPHONY for Windows (sources included for otherOSes)
+	Will use djmrgl or rgl packages for rendering
 	SYMPHONY libraries
-}
-
-# ignore OSX recommendations
-! {
-	GDAL OSX frameworks built by William Kyngesburye at http://www.kyngchaos.com/ may be used for source installs on OSX
-	GDAL OSXframeworks built by William Kyngesburye athttp://www.kyngchaos.com/ may be used for source installs onOSX
-	GDAL OSXframeworks built by William Kyngesburye athttp://www.kyngchaos.com/ may be used for source installs onOSX.
-}
-
-! {
-	GEOS OSX frameworks built byWilliam Kyngesburye at http://www.kyngchaos.com/ may be usedfor source installs on OSX.
 }
 
 # SoPhy splits its Depends field into windows and linux
 ! {
-	windows:Tiff for windows
-	windows: Tiff (libtiff3.dll)
-	windows: Tiff(libtiff3.dll)
 	zlib1.dll and jpeg62.dll
 }
 

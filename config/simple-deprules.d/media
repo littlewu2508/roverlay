@@ -12,7 +12,7 @@ media-sound/csound {
 
 #deptype all
 media-gfx/imagemagick {
-	Image Magick (for reading non PPM format)
+	Image Magick
 }
 #deptype sys
 
@@ -23,25 +23,15 @@ media-gfx/graphviz :: dot from graphviz
 }
 
 media-gfx/swftools {
-	SWF Tools (http://swftools.org) forsaveSWF()
-	SWF Tools (http://swftools.org) for saveSWF()
+	SWF.*Tools
 }
 
 virtual/ffmpeg {
-	FFmpeg (http://ffmpeg.org) for saveVideo()
-	FFmpeg(http://ffmpeg.org) for saveVideo()
 	ffmpeg
 }
 
-media-gfx/dcraw {
-	dcraw(for reading RAW images).
-	dcraw (for readingRAW images).
-}
+media-gfx/dcraw :: dcraw
 
-media-libs/fontconfig {
-	fontconfig
-}
+media-libs/fontconfig :: fontconfig
 
-media-fonts/corefonts {
-	msttcorefonts
-}
+media-fonts/corefonts :: msttcorefonts
