@@ -33,7 +33,7 @@ _CONSTANTS = dict (
    DESCRIPTION = dict (
       field_separator       = ':',
       comment_chars         = '#;',
-      list_split_regex      = '\s*[,;]{1}\s*',
+      list_split_regex      = '\s*[,;]{1}\s*(?![^\(]*\))',
       file_name             = 'DESCRIPTION',
    ),
 
