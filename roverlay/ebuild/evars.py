@@ -96,9 +96,7 @@ class UseExpandListValue (
    RE_USENAME = re.compile (
       (
          '(?P<prefix>.*[/])?'
-         '(?P<pf>'
-            '((?P<pn>.*)(?P<pvr>[-][0-9].*([-]r[0-9]+)?))'
-         '|.*)'
+         '(?P<pn>[^\[]*)(\[(?P<use>[^\]]*)\])?(?P<pvr>[-][0-9].*([-]r[0-9]+)?)?'
       )
    )
 
@@ -128,7 +126,7 @@ class UseExpandListValue (
       match = self.__class__.RE_USENAME.match ( dep.dep )
       if match:
          return self._get_use_key (
-            ( match.group ( "pn" ) or match.group ( "pf" ) )
+            ( match.group ( "use" ) or match.group ( "pn" ) )
          )
       else:
          raise ValueError (
