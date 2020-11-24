@@ -219,6 +219,8 @@ class EbuildCreation ( object ):
             if homepage_str:
                ebuild.use ( evars.HOMEPAGE ( homepage_str ) )
 
+         if 'KEYWORDS' not in ebuild:
+            ebuild.use ( evars.KEYWORDS ( "~amd64" ) )
 
          #ebuild_text = ebuild.to_str()
          ## FIXME: debug rstrip()
