@@ -1,17 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python3_8 )
 PYTHON_REQ_USE="ssl,threads(+),readline(+)"
 
 EGIT_REPO_URI='git://anongit.gentoo.org/proj/R_overlay.git'
 
-DOCS=()
+DOCS=( examples )
 HTML_DOCS=( doc/html/. )
-EXAMPLES=( examples/. )
 
 inherit user distutils-r1 git-r3 bash-completion-r1
 
@@ -30,9 +28,7 @@ DEPEND="
 	compress-config? ( app-arch/bzip2 )"
 RDEPEND="
 	sys-apps/portage
-	dev-python/mako[${PYTHON_USEDEP}]
-	xz? ( $(python_gen_cond_dep dev-python/backports-lzma[$(python_gen_usedep python2_7)] python2_7 ) )
-	virtual/python-futures[${PYTHON_USEDEP}]"
+	dev-python/mako[${PYTHON_USEDEP}]"
 
 pkg_preinst() {
 	enewgroup roverlay
@@ -53,6 +49,10 @@ python_install_all() {
 		BASHCOMPDIR="${D}/$(get_bashcompdir)" \
 		COMPRESSED_CONFIG="$(usex compress-config 1 0)" \
 		install-nonpy
+
+	insinto /usr/share/roverlay/eclass
+	doins files/eclass/R-packages.eclass
+	doins -r files/hooks
 }
 
 pkg_config() {
