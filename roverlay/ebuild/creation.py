@@ -220,7 +220,7 @@ class EbuildCreation ( object ):
                ebuild.use ( evars.HOMEPAGE ( homepage_str ) )
 
          if 'KEYWORDS' not in ebuild:
-            ebuild.use ( evars.KEYWORDS ( "~amd64" ) )
+            ebuild.use ( evars.KEYWORDS ( "~amd64 ~x64-macos ~arm64-macos" ) )
 
          #ebuild_text = ebuild.to_str()
          ## FIXME: debug rstrip()
