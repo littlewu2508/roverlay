@@ -68,7 +68,7 @@ if hashlib_supports ( 'whirlpool' ):
    _HASH_CREATE_MAP ['whirlpool'] = hashlib_wrap ( "whirlpool" )
 else:
    import portage.util.whirlpool
-   _HASH_CREATE_MAP ['whirlpool'] = portage.util.whirlpool.new
+   _HASH_CREATE_MAP ['whirlpool'] = portage.util.whirlpool.CWhirlpool
 
 # -- end of imports / HASH_CREATE_MAP
 

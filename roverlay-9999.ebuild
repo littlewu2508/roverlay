@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_8 )
+PYTHON_COMPAT=( python3_11 )
 PYTHON_REQ_USE="ssl,threads(+),readline(+)"
 
 EGIT_REPO_URI='git://anongit.gentoo.org/proj/R_overlay.git'
