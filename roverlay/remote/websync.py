@@ -532,7 +532,8 @@ class WebsyncRepo ( WebsyncBase ):
       ) as webh:
          content_type = webh.info().get ( 'content-type', None )
 
-         if content_type != 'text/plain':
+         # A page without content_type is just text/plain.
+         if content_type != 'text/plain' and (content_type is not None):
             print (
                "content type {!r} is not supported!".format ( content_type )
             )
