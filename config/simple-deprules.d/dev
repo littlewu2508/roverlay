@@ -35,7 +35,7 @@ dev-lang/lua :: lua version>= 5.1.4
 
 ~dev-tcltk/tktable :: tktable
 
-dev-util/cmake :: cmake
+dev-build/cmake :: cmake
 
 ~dev-python/numpy :: numpy
 
