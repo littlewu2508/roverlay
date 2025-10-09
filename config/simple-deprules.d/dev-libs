@@ -43,7 +43,7 @@ dev-libs/quantlib :: QuantLib
 
 ~dev-libs/xerces-c :: xerces-c
 
-~sys-devel/clang {
+~llvm-core/clang {
 	clang
 }
 
